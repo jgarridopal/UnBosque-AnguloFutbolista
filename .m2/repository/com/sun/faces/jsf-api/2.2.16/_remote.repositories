@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Mar 28 12:05:04 COT 2018
+jsf-api-2.2.16.jar>=
+jsf-api-2.2.16.jar>central=
+jsf-api-2.2.16.pom>central=

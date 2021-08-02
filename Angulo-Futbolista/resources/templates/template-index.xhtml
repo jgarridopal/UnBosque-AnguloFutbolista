@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+
+	<title>Ángulo Futbolista</title>
+
+	<h:outputStylesheet library="styles" name="index-style.css" />
+	<h:outputStylesheet library="styles" name="index-layout.css" />
+	
+	<f:event type="preRenderView" listener="#{sesionController.invalidarSeccion()}"/>
+
+</h:head>
+
+
+<h:body styleClass="body">
+
+	<h:panelGroup layout="block" id="wrapper">
+
+		<h:panelGroup layout="block" id="header_wrapper">
+
+			<h:panelGroup layout="block" id="header_blurry">
+
+			</h:panelGroup>
+
+			<h:panelGroup layout="block" id="header">
+
+				<h:graphicImage id="logo" library="images" name="logo.jpg" />
+
+				<h:outputText id="page_name" value="#{propertie.nombre_pagina}" />
+
+				<h:form id="sesion_wrapper">
+					<h:commandLink styleClass="sesion"
+						actionListener="#{sesionController.manejarSesion()}">#{textController.estadoDeSesion()}</h:commandLink>
+				</h:form>
+
+			</h:panelGroup>
+
+		</h:panelGroup>
+
+		<h:panelGroup layout="block" id="main">
+
+
+			<h:panelGroup layout="block" id="main_section_blurry">
+
+			</h:panelGroup>
+
+			<h:panelGroup layout="block" id="main_section">
+
+				<h:form id="nav_menu">
+
+					<p:tabMenu id="tab-menu" style="font-size: 1.4em;"
+						model="#{menuController.model}" activeIndex="#{param.i}" />
+
+					<h:panelGroup layout="block" id="content">
+
+						<ui:insert name="content">
+
+						</ui:insert>
+
+					</h:panelGroup>
+
+				</h:form>
+
+			</h:panelGroup>
+
+		</h:panelGroup>
+
+	</h:panelGroup>
+
+</h:body>
+
+
+</html>

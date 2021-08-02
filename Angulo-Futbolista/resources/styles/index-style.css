@@ -1,0 +1,93 @@
+@CHARSET "ISO-8859-1";
+
+.body,html {
+	
+	background: url("#{resource['images:fondo.jpg']}");
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	
+	font-family: Arial, sans-serif;	
+		
+}		
+
+#header_blurry {
+	
+	background-color: #e5e5e5;
+	
+	opacity: 0.90;
+    filter: alpha(opacity=90);
+
+}
+
+#logo {
+
+	border-radius: 3px;
+
+	border: 1px solid #000000;
+	
+}
+
+.sesion {
+	
+	text-decoration: none;
+	
+	font-size: 1.6em;
+	font-weight: 500;
+	font-family: Impact, fantasy;
+	color: #{propertie.color1};
+		
+}
+
+#page_name {
+	
+	font-size: 3.8em;
+	font-weight: 400;
+	font-family: Impact, fantasy;
+	color: #{propertie.color1};
+	
+}
+
+
+#main_section_blurry {
+
+	border: solid;
+	border-color: white; 
+	border-radius: 4px;
+
+	background-color: #d4d6d1;
+	
+	opacity: 0.35;
+    filter: alpha(opacity=35);
+	
+}
+
+#nav-menu {
+	
+	font-size: 1.4em;
+	
+}
+
+.grupos {
+	border-radius: 4px;
+	background-color: #fafafa;
+	opacity: 0.90;
+    filter: alpha(opacity=90);
+}
+
+.encabezado_grupos {
+	border-bottom: solid;
+	font-size: 1.7em;
+	color: #564d10;
+}
+
+.pais {
+	font-size: 1.3em;
+	color: #1a1f4f;
+}
+
+.icono {
+	width: 100px;
+}

@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Wed Mar 28 11:15:36 COT 2018
+http\://repo.maven.apache.org/maven2/.lastUpdated=1522253736564
+legacy-http\://download.java.net/maven/1/.lastUpdated=1522253736251
+http\://download.java.net/maven/1/.error=Could not transfer artifact org.apache.myfaces.tomahawk\:tomahawk\:pom\:1.1.6 from/to java.net (http\://download.java.net/maven/1)\: No connector available to access repository java.net (http\://download.java.net/maven/1) of type legacy using the available factories AsyncRepositoryConnectorFactory, WagonRepositoryConnectorFactory

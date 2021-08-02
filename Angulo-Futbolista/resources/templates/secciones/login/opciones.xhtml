@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+
+<h:body>
+
+	<h:form>
+		<h:panelGrid styleClass="tabla_sesion" cellspacin="4">
+
+			<p:commandButton styleClass="inicio" value="Iniciar Sesión"
+				actionListener="#{sesionController.establecerSeccion('login.xhtml')}"
+				ajax="true" update="content" />
+
+			<br />
+
+			<h:outputText id="text" value="No tienes cuenta?" />
+
+			<h:commandLink styleClass="link" value="Crear Cuenta"
+				actionListener="#{sesionController.establecerSeccion('registrarse.xhtml')}">
+				<p:ajax update="content"></p:ajax>
+			</h:commandLink>
+
+		</h:panelGrid>
+	</h:form>
+
+</h:body>
+
+
+</html>

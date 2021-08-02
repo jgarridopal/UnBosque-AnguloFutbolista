@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+
+<h:body>
+
+	<p:growl autoUpdate="true" id="growl" showDetail="false" sticky="false" />
+
+	<h:form>
+
+		<h:panelGrid id="grid" styleClass="tabla_crear_cuenta" cellspacing="5">
+
+			<h:panelGroup layout="block" id="block">
+				<p:inputText id="usuario" styleClass="textbox_larga" required="true"
+					requiredMessage="Ingrese el nombre de usuario"
+					value="#{registrarController.user.userName}" />
+				<p:watermark for="usuario" value="Usuario" id="watermark_usuario" />
+			</h:panelGroup>
+
+			<h:panelGroup layout="block" id="block2">
+				<p:inputText id="correo" styleClass="textbox_larga" required="true"
+					requiredMessage="Ingrese un correo"
+					value="#{registrarController.user.emailAddress}" />
+				<p:watermark for="correo" value="Correo" id="watermark_correo" />
+			</h:panelGroup>
+
+			<h:panelGroup styleClass="captcha" layout="block">
+				<p:captcha label="Captcha" requiredMessage="Valide el captcha" />
+			</h:panelGroup>
+
+			<p:commandButton styleClass="registrarse" update="define"
+				value="registrarse" actionListener="#{registrarController.registrar}" />
+
+
+			<h:commandLink styleClass="link" value="volver"
+				actionListener="#{sesionController.establecerSeccion('opciones.xhtml')}"
+				immediate="true">
+				<p:ajax update="content"></p:ajax>
+			</h:commandLink>
+
+		</h:panelGrid>
+
+	</h:form>
+
+</h:body>
+
+
+</html>

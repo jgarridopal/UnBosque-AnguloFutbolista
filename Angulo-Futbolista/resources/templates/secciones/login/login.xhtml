@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+
+<h:body>
+
+	<p:growl id="growl" autoUpdate="true" showDetail="false" sticky="false" />
+
+	<h:form>
+
+		<h:panelGrid id="grid" styleClass="tabla_login" cellspacing="6">
+
+			<h:panelGroup>
+				<p:inputText id="correo" required="true"
+					requiredMessage="Ingrese el correo"
+					value="#{loginController.user.emailAddress}" styleClass="textbox" />
+				<p:watermark for="correo" value="Ingresa el correo"
+					id="watermark_correo" />
+			</h:panelGroup>
+
+			<h:panelGroup>
+				<p:password id="contrasena" value="#{loginController.user.password}"
+					required="true" requiredMessage="Ingrese la contraseña"
+					styleClass="textbox" />
+				<p:watermark for="contrasena" value="Ingresa la contraseña"
+					id="watermark_contrasena" />
+			</h:panelGroup>
+			
+			<h:panelGroup>
+				<br></br>
+			</h:panelGroup>
+
+			<h:commandLink styleClass="link" value="Olvidé mi contraseña"
+				immediate="true"
+				actionListener="#{sesionController.establecerSeccion('restaurarcontrasena.xhtml')}">
+				<p:ajax update="content"></p:ajax>
+			</h:commandLink>
+
+			<p:commandButton update="content" styleClass="login" value="login"
+				actionListener="#{loginController.iniciarSesion()}" />
+
+			<h:commandLink styleClass="link" value="volver" immediate="true"
+				actionListener="#{sesionController.establecerSeccion('opciones.xhtml')}">
+				<p:ajax update="content"></p:ajax>
+			</h:commandLink>
+
+		</h:panelGrid>
+
+	</h:form>
+
+</h:body>
+
+
+</html>

@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Wed Mar 28 23:16:34 COT 2018
+http\://repo.maven.apache.org/maven2/.lastUpdated=1522296994552
+legacy-http\://download.java.net/maven/1/.lastUpdated=1522296994018
+http\://download.java.net/maven/1/.error=Could not transfer artifact javax.servlet\:javax.servlet-api\:jar\:4.0.0 from/to java.net (http\://download.java.net/maven/1)\: No connector available to access repository java.net (http\://download.java.net/maven/1) of type legacy using the available factories AsyncRepositoryConnectorFactory, WagonRepositoryConnectorFactory
